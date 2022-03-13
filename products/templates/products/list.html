@@ -1,3 +1,5 @@
 {% for obj in object_list %}
-    {{ obj.title }} | {{ obj.description }} | {{ obj.price }}<br>
+    <a href="{% url 'productdetail' obj.slug %}">{{ obj.title }}</a>
+    | {{ obj.description }} | {{ obj.price }}
+    <br><br>
 {% endfor %}
